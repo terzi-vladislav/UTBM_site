@@ -16,10 +16,25 @@ body {
     margin: 0;
 }
 
+.download {
+    font-size: 42px;
+    color: white;
+}
+
 .mac_logo {
-    background-image: url('');
+    width: 42px;
+    height: 42px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-image: url('https://github.com/terzi-vladislav/UTBM_site/blob/master/Assets/mac_logo.png?raw=true');
 }
 
 .win_logo {
-    background-image: url('');
+    width: 42px;
+    height: 42px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-image: url('https://github.com/terzi-vladislav/UTBM_site/blob/master/Assets/win_logo.png?raw=true');
 }
