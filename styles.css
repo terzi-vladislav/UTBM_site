@@ -79,14 +79,14 @@ body {
 
 .button:hover {
     cursor: pointer;
-    -webkit-filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));
+    /*-webkit-filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));*/
     filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));
     transform: translate(0, -1px);
     transition: 800ms;
 }
 
 .button:active {
-    -webkit-filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.2));
+    /*-webkit-filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.2));*/
     filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.2));
     transform: translate(0, 1px);
     transition: 200ms;
@@ -128,7 +128,7 @@ body {
 }
 
 .mac_logo {
-    -webkit-filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.4));
+    /*-webkit-filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.4));*/
     filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.4));
     width: 42px;
     height: 42px;
@@ -164,16 +164,6 @@ body {
 }
 
 .win_logo {
-    -webkit-filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.4));
-    filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.4));
-    width: 42px;
-    height: 42px;
-    margin-right: 16px;
-    margin-left: 16px;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: center;
-    background-size: contain;
     background-image: url('Assets/win_logo.png');
 }
 
