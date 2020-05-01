@@ -1,0 +1,10 @@
+{
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "hosting": {
+    "site": "under-the-blue-moon-game",
+    "public": "public"
+  }
+}
+

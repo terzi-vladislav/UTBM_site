@@ -1,0 +1,200 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('Assets/back.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: black;
+    background-position-x: center;
+    background-position-y: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@font-face {
+    font-family: "PixelFont";
+    src: url("Assets/fonts/pressstart2p-regular-webfont.woff") format("woff"),
+    url("Assets/fonts/pressstart2p-regular-webfont.woff2") format("woff2");
+}
+
+.nav_bar {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(0, 0, 0, .5);
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+}
+
+.utbm {
+    font-family: "PixelFont";
+    font-size: 35px;
+    height: 35px;
+    margin: 16px 16px 10px 16px;
+    font-weight:normal;
+    font-style:normal;
+    color: white;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4);
+}
+
+.background {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(0, -50%);
+    background-color: rgba(0, 0, 0, .25);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    box-shadow: 0px 0px 500px rgba(0, 0, 0, 1);
+    padding: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.button {
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 15px;
+    padding: 10px;
+}
+
+.button:hover {
+    cursor: pointer;
+    -webkit-filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));
+    filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));
+    transform: translate(0, -1px);
+    transition: 800ms;
+}
+
+.button:active {
+    -webkit-filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.2));
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.2));
+    transform: translate(0, 1px);
+    transition: 200ms;
+}
+
+.instructions {
+    font-family: "PixelFont";
+    font-size: 30px;
+    color: white;
+}
+
+.instruction_point {
+    font-family: "PixelFont";
+    font-size: 20px;
+    color: white;
+}
+
+.optional_text {
+    font-family: "PixelFont";
+    font-size: 10px;
+    color: white;
+}
+
+.download {
+    font-family: "PixelFont";
+    font-size: 42px;
+    height: 42px;
+    margin: 16px 16px 10px 16px;
+    font-weight:normal;
+    font-style:normal;
+    color: white;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+}
+
+.download:hover {
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: 800ms;
+}
+
+.mac_logo {
+    width: 42px;
+    height: 42px;
+    filter: inherit;
+    margin-right: 16px;
+    margin-left: 16px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: contain;
+    background-image: url('Assets/mac_logo.png');
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover {
+    text-decoration: none;
+    cursor: pointer;
+    text-shadow: 0px 0px 25px rgba(255, 255, 255, 0.7);
+    transition: 400ms;
+}
+
+.close:active {
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+    transition: 100ms;
+}
+
+.win_logo {
+    background-image: url('Assets/win_logo.png');
+}
+
+@media all and (max-width: 700px) {
+
+    .nav_bar {
+        height: 40px;
+    }
+
+    .utbm {
+        font-size: 20px;
+        height: 20px;
+    }
+
+    .download {
+        font-size: 30px;
+        height: 30px;
+        margin: 10px 10px 6px 10px;
+    }
+
+    .mac_logo {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .win_logo {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+}
