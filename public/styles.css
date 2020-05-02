@@ -1,3 +1,76 @@
+/*=================================================öбнулись============================================================*/
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus, :active {
+    outline: none;
+}
+
+a:focus, a:active {
+    outline: none;
+}
+
+a, a:visited, a:hover {
+    text-decoration: none;
+}
+
+nav, footer, header, aside {
+    display: block;
+}
+
+html, body {
+    font-family: "PixelFont";
+    height: 100%;
+    width: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+/*========================================================================================================================*/
+
 body {
     margin: 0;
     padding: 0;
@@ -32,7 +105,6 @@ body {
 }
 
 .utbm {
-    font-family: "PixelFont";
     font-size: 35px;
     height: 35px;
     margin: 16px 16px 10px 16px;
@@ -51,9 +123,17 @@ body {
     background-color: rgba(0, 0, 0, .25);
     margin: 0;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@media all and (max-width: 1230px) {
+    .background {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
 }
 
 .modal {
@@ -65,6 +145,13 @@ body {
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
+}
+
+.contain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .button {
@@ -93,25 +180,22 @@ body {
 }
 
 .instructions {
-    font-family: "PixelFont";
     font-size: 30px;
     color: white;
 }
 
 .instruction_point {
-    font-family: "PixelFont";
     font-size: 20px;
     color: white;
 }
 
 .optional_text {
-    font-family: "PixelFont";
     font-size: 10px;
     color: white;
 }
 
 .download {
-    font-family: "PixelFont";
+
     font-size: 42px;
     height: 42px;
     margin: 16px 16px 10px 16px;

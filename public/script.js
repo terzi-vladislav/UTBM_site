@@ -41,3 +41,34 @@ function download(filename) {
 
     document.body.removeChild(element);
 }
+
+function writeUserData(email) {
+    let emailObject = {
+        email: email
+    };
+
+    let emailValid = document.getElementById("subscribe")
+
+    firebase.database().ref('subscription-entries').push(emailObject)
+        .then(() => {
+            let email = document.getElementById("inputEmail");
+            email.value = "";
+            console.log('success');
+        }, function(error) {
+            console.log('error' + error);
+        });
+}
+
+let subscribeButton = document.getElementById("subscribe");
+
+subscribeButton.addEventListener('click',
+    () => {
+        let email = document.getElementById("inputEmail").value;
+        let error = document.getElementById("inputEmail").validationMessage;
+        if (!error) {
+            writeUserData(email);
+        } else {
+            console.log(error);
+        }
+    });
+

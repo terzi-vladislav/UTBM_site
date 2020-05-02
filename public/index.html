@@ -5,20 +5,30 @@
     <title>Under The Blue Moon</title>
     <link rel="stylesheet" href="styles.css"/>
     <link rel="icon" href="Assets/logo_withput_bg.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
     <div class="background">
         <div class="nav_bar">
             <h1 class="utbm"> UNDER THE BLUE MOON </h1>
         </div>
-        <div class="button" id="mac_download">
-            <h1 class="download">DOWNLOAD FOR</h1>
-            <div class="mac_logo"></div>
+        <div class="contain">
+            <div class="button" id="mac_download">
+                <h1 class="download">DOWNLOAD FOR</h1>
+                <div class="mac_logo"></div>
+            </div>
+            <div class="button" id="win_download">
+                <h1 class="download">DOWNLOAD FOR</h1>
+                <div class="mac_logo win_logo"></div>
+            </div>
         </div>
-        <div class="button" id="win_download">
-            <h1 class="download">DOWNLOAD FOR</h1>
-            <div class="mac_logo win_logo"></div>
-        </div>
+        <form class="contain">
+            <h1 class="download">STAY WITH US</h1>
+            <input type="email" id="inputEmail" placeholder="Your email" class="email" required autofocus>
+            <div class="button" id="subscribe">
+                <h1 class="download">SUBSCRIBE</h1>
+            </div>
+        </form>
         <div id="mac_instructions" class="modal">
             <span class="close">&times;</span>
             <h1 class="instructions">Instructions</h1>
@@ -39,11 +49,26 @@
             <p class="optional_text">The app is saved as an exception to your security settings, and you can open it in the future by double-clicking it or from cli, just as you can with any authorised app.</p>
         </div>
     </div>
-    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
 
-    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+
+    <script>
+        let firebaseConfig = {
+            apiKey: "AIzaSyC5EyhBD_u2RkMqM7Qsd8vghf6wB2qrAN0",
+            authDomain: "under-the-blue-moon.firebaseapp.com",
+            databaseURL: "https://under-the-blue-moon.firebaseio.com",
+            projectId: "under-the-blue-moon",
+            storageBucket: "under-the-blue-moon.appspot.com",
+            messagingSenderId: "56196221133",
+            appId: "1:56196221133:web:8c4d57c209087c6b4ec184",
+            measurementId: "G-MBTE8387MH"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="script.js"></script>
+
 </body>
-<script src="script.js"></script>
 </html>
