@@ -28,12 +28,16 @@ nav, footer, header, aside {
     display: block;
 }
 
+@font-face {
+    font-family: "PixelFont";
+    src: url("Assets/fonts/pressstart2p-regular-webfont.woff") format("woff"),
+    url("Assets/fonts/pressstart2p-regular-webfont.woff2") format("woff2");
+}
+
 html, body {
     font-family: "PixelFont";
     height: 100%;
     width: 100%;
-    line-height: 1;
-    font-size: 14px;
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -56,10 +60,6 @@ button::-moz-focus-inner {
     border: 0;
 }
 
-ul li {
-    list-style: none;
-}
-
 img {
     vertical-align: top;
 }
@@ -71,6 +71,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /*========================================================================================================================*/
 
+html {
+    font-family: "PixelFont";
+}
 body {
     margin: 0;
     padding: 0;
@@ -84,12 +87,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-@font-face {
-    font-family: "PixelFont";
-    src: url("Assets/fonts/pressstart2p-regular-webfont.woff") format("woff"),
-    url("Assets/fonts/pressstart2p-regular-webfont.woff2") format("woff2");
 }
 
 .nav_bar {
@@ -111,8 +108,13 @@ body {
     font-weight:normal;
     font-style:normal;
     color: white;
-    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4);
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
 }
+
+.utbm:hover {
+    cursor: default;
+}
+
 
 .background {
     position: absolute;
@@ -125,19 +127,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-@media all and (max-width: 1230px) {
-    .background {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-    }
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
 .modal {
-    box-shadow: 0px 0px 500px rgba(0, 0, 0, 1);
+    box-shadow: 0 0 500px rgba(0, 0, 0, 1);
     padding: 30px;
     width: 100%;
     box-sizing: border-box;
@@ -195,25 +192,24 @@ body {
 }
 
 .download {
-
-    font-size: 42px;
-    height: 42px;
+    font-size: 40px;
+    height: 40px;
     margin: 16px 16px 10px 16px;
     font-weight:normal;
     font-style:normal;
     color: white;
-    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
 .download:hover {
-    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
     cursor: pointer;
     transition: 800ms;
 }
 
 .mac_logo {
     width: 42px;
-    height: 42px;
+    height: 44px;
     filter: inherit;
     margin-right: 16px;
     margin-left: 16px;
@@ -222,6 +218,13 @@ body {
     background-position-y: center;
     background-size: contain;
     background-image: url('Assets/mac_logo.png');
+}
+
+#success {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .close {
@@ -234,51 +237,146 @@ body {
     transition: 0.3s;
 }
 
+#success_close {
+    top: 35px;
+    right: 35px;
+}
+
+#report_close {
+    top: 35px;
+    right: 35px;
+}
+
 .close:hover {
     text-decoration: none;
     cursor: pointer;
-    text-shadow: 0px 0px 25px rgba(255, 255, 255, 0.7);
+    text-shadow: 0 0 25px rgba(255, 255, 255, 0.7);
     transition: 400ms;
 }
 
 .close:active {
-    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
     transition: 100ms;
 }
 
 .win_logo {
+    width: 42px;
+    height: 42px;
     background-image: url('Assets/win_logo.png');
+}
+
+.contain {
+    background-color: rgba(0, 0, 0, .45);
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.email {
+    max-width: 80vw;
+    width: 40em;
+    height: 4em;
+    padding: 2em 1.5em 1.5em 1.5em;
+    margin: 1vh;
+}
+
+#stay:hover {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: 800ms;
+}
+
+.bug {
+    font-size: 30px;
+    position: absolute;
+    bottom: 0;
+}
+
+.bug:active {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    transition: 100ms;
 }
 
 @media all and (max-width: 700px) {
 
+    .download {
+        font-size: 5vw;
+        height: 6vw;
+        margin: 4vw 2vw 2vw 4vw;
+    }
+
     .nav_bar {
-        height: 40px;
+        height: 15vw;
     }
 
     .utbm {
-        font-size: 20px;
-        height: 20px;
+        font-size: 4vw;
+        height: 5vw;
+    }
+}
+
+@media all and (max-device-aspect-ratio: 1/1) {
+
+    .nav_bar {
+        height: 15vw;
+    }
+
+    .utbm {
+        font-size: 4vw;
+        height: 5vw;
     }
 
     .download {
-        font-size: 30px;
-        height: 30px;
-        margin: 10px 10px 6px 10px;
+        font-size: 7vw;
+        height: 8vw;
+        margin: 4vw 2vw 2vw 4vw;
     }
 
     .mac_logo {
-        width: 30px;
-        height: 30px;
-        margin-right: 10px;
-        margin-left: 10px;
+        width: 8vw;
+        height: 8vw;
+        margin-right: 4vw;
+        margin-left: 4vw;
     }
 
     .win_logo {
-        width: 30px;
-        height: 30px;
-        margin-right: 10px;
-        margin-left: 10px;
+        width: 8vw;
+        height: 8vw;
+        margin-right: 4vw;
+        margin-left: 4vw;
     }
 
+    .instructions {
+        font-size: 6vw;
+        height: 10vw;
+    }
+
+    .instruction_point {
+        font-size: 4vw;
+    }
+
+    .close {
+        right: 15px;
+    }
+}
+
+#report {
+    width: 100%;
+    height: 100%;
+}
+
+.problem-text {
+    width: 90vw;
+    height: 80vh;
+    padding: 2em;
+    margin-top: 55px;
+}
+
+.report {
+    background-color: rgba(255, 255, 255, .25);
+    margin-bottom: 0;
 }
