@@ -4,63 +4,76 @@
     <meta charset="UTF-8">
     <title>Under The Blue Moon</title>
     <link rel="stylesheet" href="styles.css"/>
-    <link rel="icon" href="Assets/logo_withput_bg.png">
+    <link rel="icon" href="Assets/Moon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
-    <div class="background">
-        <div class="nav_bar">
-            <h1 class="utbm"> UNDER THE BLUE MOON </h1>
+<!--    First Page -->
+    <div class="page">
+        <h1 class="header default"> UNDER THE BLUE MOON </h1>
+        <div class="moon-logo"></div>
+        <div class="links">
+            <a href="https://twitter.com/undrthebluemoon" class="logo twitter"></a>
+            <a href="https://instagram.com/undrthebluemoon" class="logo instagram"></a>
+            <a href="mailto: utbm.game@gmail.com" class="logo mail"></a>
         </div>
-        <div class="button" id="mac_download">
-            <h2 class="download">DOWNLOAD</h2>
-            <div class="mac_logo"></div>
-        </div>
-        <div class="button" id="win_download">
-            <h2 class="download">DOWNLOAD</h2>
-            <div class="mac_logo win_logo"></div>
-        </div>
-        <form class="contain">
-            <h2 class="download" style="cursor: default" id="stay">STAY WITH US</h2>
-            <input type="email" id="inputEmail" placeholder="Your email" class="email" required autofocus>
-            <div class="button" id="subscribe">
-                <h2 class="download">SUBSCRIBE</h2>
-            </div>
-        </form>
-        <h2 class="download bug" id="bug_button">REPORT A BUG</h2>
-        <div id="mac_instructions" class="modal">
-            <span class="close">&times;</span>
-            <h2 class="instructions">Instructions</h2>
-            <ul style="list-style-type:square">
-                <li class="instruction_point">
-                    Unpack .zip file.
-                </li>
-                <li class="instruction_point">
-                    In the Finder on your Mac, relocate MacOSBuild.app to application folder.
-                </li>
-                <li class="instruction_point">
-                    Control-click the app icon, then choose Open from the shortcut menu.
-                </li>
-                <li class="instruction_point">
-                    Click Open.
-                </li>
-            </ul>
-            <p class="optional_text">The app is saved as an exception to your security settings, and you can open it in the future by double-clicking it or from cli, just as you can with any authorised app.</p>
-        </div>
-        <div id="success" class="modal">
-            <div class="instructions">SUCCESS!</div>
-            <div class="close" id="success_close">&times;</div>
-        </div>
-        <div id="report" class="modal">
-            <div class="close" id="report_close">&times;</div>
-            <form class="contain">
-                <textarea placeholder="Describe your problem here..." class="problem-text" id="problem" required autofocus></textarea>
-                <div class="button report" id="report_issue">
-                    <h2 class="download">REPORT!</h2>
+        <div class="container-buttons">
+            <h2 class="default">CURRENT DEMO</h2>
+            <div class="download-buttons">
+                <div class="button" id="mac_download">
+                    <h2 class="default download">DOWNLOAD</h2>
+                    <div class="mac_logo"></div>
                 </div>
-            </form>
+                <div class="button" id="win_download">
+                    <h2 class="default download">DOWNLOAD</h2>
+                    <div class="mac_logo win_logo"></div>
+                </div>
+            </div>
         </div>
     </div>
+
+<!--    <div class="background">-->
+<!--        <form class="contain">-->
+<!--            <h2 class="download" style="cursor: default" id="stay">STAY WITH US</h2>-->
+<!--            <input type="email" id="inputEmail" placeholder="Your email" class="email" required autofocus>-->
+<!--            <div class="button" id="subscribe">-->
+<!--                <h2 class="download">SUBSCRIBE</h2>-->
+<!--            </div>-->
+<!--        </form>-->
+<!--        <h2 class="download bug" id="bug_button">REPORT A BUG</h2>-->
+<!--        <div id="mac_instructions" class="modal">-->
+<!--            <span class="close">&times;</span>-->
+<!--            <h2 class="instructions">Instructions</h2>-->
+<!--            <ul style="list-style-type:square">-->
+<!--                <li class="instruction_point">-->
+<!--                    Unpack .zip file.-->
+<!--                </li>-->
+<!--                <li class="instruction_point">-->
+<!--                    In the Finder on your Mac, relocate MacOSBuild.app to application folder.-->
+<!--                </li>-->
+<!--                <li class="instruction_point">-->
+<!--                    Control-click the app icon, then choose Open from the shortcut menu.-->
+<!--                </li>-->
+<!--                <li class="instruction_point">-->
+<!--                    Click Open.-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--            <p class="optional_text">The app is saved as an exception to your security settings, and you can open it in the future by double-clicking it or from cli, just as you can with any authorised app.</p>-->
+<!--        </div>-->
+<!--        <div id="success" class="modal">-->
+<!--            <div class="instructions">SUCCESS!</div>-->
+<!--            <div class="close" id="success_close">&times;</div>-->
+<!--        </div>-->
+<!--        <div id="report" class="modal">-->
+<!--            <div class="close" id="report_close">&times;</div>-->
+<!--            <form class="contain">-->
+<!--                <textarea placeholder="Describe your problem here..." class="problem-text" id="problem" required autofocus></textarea>-->
+<!--                <div class="button report" id="report_issue">-->
+<!--                    <h2 class="download">REPORT!</h2>-->
+<!--                </div>-->
+<!--            </form>-->
+<!--        </div>-->
+<!--    </div>-->
 
     <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-analytics.js"></script>
@@ -73,10 +86,11 @@
             projectId: "under-the-blue-moon",
             storageBucket: "under-the-blue-moon.appspot.com",
             messagingSenderId: "56196221133",
-            appId: "1:56196221133:web:8c4d57c209087c6b4ec184",
-            measurementId: "G-MBTE8387MH"
+            appId: "1:56196221133:web:cfbf3aa70a1c89b74ec184",
+            measurementId: "G-BL03PXGGE9"
         };
         firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
     </script>
 
     <script src="script.js"></script>

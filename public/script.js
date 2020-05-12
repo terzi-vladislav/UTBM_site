@@ -1,11 +1,11 @@
 let mac_button = document.getElementById("mac_download");
 let win_button = document.getElementById("win_download");
 
-let modal = document.getElementById('mac_instructions');
-modal.style.display = "none";
+// let modal = document.getElementById('mac_instructions');
+// modal.style.display = "none";
 
 mac_button.onclick = () => {
-    show_mac_manual();
+    // show_mac_manual();
     download("MacOSBuild.zip");
     firebase.analytics().logEvent('Download_for_mac');
 }
@@ -28,7 +28,7 @@ function show_mac_manual() {
 
 function download(filename) {
     let element = document.createElement('a');
-    if (filename == "MacOSBuild.zip") {
+    if (filename === "MacOSBuild.zip") {
         element.setAttribute('href', 'Versions/MacOSBuild.zip');
     } else {
         element.setAttribute('href', 'Versions/WindowsBuild.zip');
@@ -61,23 +61,23 @@ function writeUserData(email) {
         });
 }
 
-let subscribeButton = document.getElementById("subscribe");
+// let subscribeButton = document.getElementById("subscribe");
 
-subscribeButton.addEventListener('click',
-    () => {
-        let email = document.getElementById("inputEmail").value;
-        let error = document.getElementById("inputEmail").validationMessage;
-        if (!error) {
-            writeUserData(email);
-        } else {
-            let email = document.getElementById("inputEmail");
-            email.value = "";
-            email.placeholder = error;
-        }
-    });
+// subscribeButton.addEventListener('click',
+//     () => {
+//         let email = document.getElementById("inputEmail").value;
+//         let error = document.getElementById("inputEmail").validationMessage;
+//         if (!error) {
+//             writeUserData(email);
+//         } else {
+//             let email = document.getElementById("inputEmail");
+//             email.value = "";
+//             email.placeholder = error;
+//         }
+//     });
 
-let modal1 = document.getElementById('success');
-modal1.style.display = "none";
+// let modal1 = document.getElementById('success');
+// modal1.style.display = "none";
 
 function show_success() {
     let modal = document.getElementById('success');
@@ -90,14 +90,14 @@ function show_success() {
     }
 }
 
-let report_button = document.getElementById("bug_button");
+// let report_button = document.getElementById("bug_button");
 
-let modal3 = document.getElementById('report');
-modal3.style.display = "none";
+// let modal3 = document.getElementById('report');
+// modal3.style.display = "none";
 
-report_button.onclick = () => {
-    show_bug_report();
-}
+// report_button.onclick = () => {
+//     show_bug_report();
+// }
 
 function show_bug_report() {
     let modal = document.getElementById('report');
@@ -129,10 +129,10 @@ function report(text) {
         });
 }
 
-let issueButton = document.getElementById('report_issue');
-
-issueButton.addEventListener('click',
-    () => {
-        let text = document.getElementById('problem').value;
-        report(text);
-    });
+// let issueButton = document.getElementById('report_issue');
+//
+// issueButton.addEventListener('click',
+//     () => {
+//         let text = document.getElementById('problem').value;
+//         report(text);
+//     });
