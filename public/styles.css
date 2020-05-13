@@ -72,7 +72,7 @@ body {
     .header {
         width: 90vw;
         position: absolute;
-        top: 5vh;
+        top: 3vh;
         left: 50%;
         transform: translate(-50%, 0);
         text-align: center;
@@ -145,7 +145,7 @@ body {
         position: absolute;
         width: 30vh;
         top: unset;
-        bottom: 13vh;
+        bottom: 10vh;
         left: 50%;
         transform: translate(-50%, 0);
     }
@@ -188,20 +188,18 @@ body {
     justify-content: space-evenly;
     align-items: center;
     margin: 5vh;
+    position: relative;
+    z-index: 2;
 }
 
 .button:hover {
     cursor: pointer;
-    -webkit-filter: drop-shadow(0px 0px 3vh rgba(255, 255, 255, 0.3));
-    filter: drop-shadow(0px 0px 3vh rgba(255, 255, 255, 0.3));
-    transform: translate(0, -0.1vh);
-    transition: 800ms;
+    transform: translate(0, -0.5vh);
+    transition: 600ms;
 }
 
 .button:active {
-    -webkit-filter: drop-shadow(0px 0px 3vh rgba(255, 255, 255, 0.2));
-    filter: drop-shadow(0px 0px 3vh rgba(255, 255, 255, 0.2));
-    transform: translate(0, -0.1px);
+    transform: translate(0, 0.5vh);
     transition: 200ms;
 }
 
@@ -246,12 +244,106 @@ body {
     background-image: url('Assets/win_logo.png');
 }
 
+/*==================================================PAGE2==============================================================*/
 
+.city {
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    background-image: url('Assets/Menu.gif');
+}
 
+@media all and (max-aspect-ratio: 1/1) {
+    .city {
+        background-image: url('Assets/back.jpg');
+    }
+}
 
+.black_back_1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(to left, #000000, rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0) 66%, #000000);
+}
 
+.black_back_2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0) 66%, #000000);
+}
 
+@media all and (max-aspect-ratio: 1/1) {
+    .city {
+        background-image: url('Assets/back.jpg');
+    }
 
+    .black_back_2 {
+        background: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0), #000000);
+    }
+
+    .black_back_1 {
+        background: linear-gradient(to left, #000000, rgba(0, 0, 0, 0), #000000);
+    }
+
+}
+
+/*==================================================EMAIL==============================================================*/
+
+.container-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.email {
+    width: 60%;
+    border: 4px solid #C3DFF2;
+    background: transparent;
+    height: 9.4vh;
+    padding: 4vh 3vh 2vh 3vh;
+    font-size: 4vh;
+    position: relative;
+    z-index: 1;
+    color: #C3DFF2;
+    caret: #C3DFF2;
+    max-width: 80%;
+}
+
+.email::placeholder{
+    color: rgba(195, 223, 242, 0.45);
+}
+
+.email-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subscribe {
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    max-width: 80%;
+}
+
+@media all and (max-width: 870px) {
+
+    .email-buttons {
+        flex-direction: column;
+    }
+
+    .email {
+        width: 70%;
+    }
+
+    .subscribe {
+        width: 70%;
+    }
+
+}
 
 /*.modal {*/
 /*    box-shadow: 0 0 500px rgba(0, 0, 0, 1);*/
@@ -263,14 +355,6 @@ body {
 /*    top: 50%;*/
 /*    transform: translate(0, -50%);*/
 /*}*/
-
-/*.contain {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*}*/
-
 
 
 /*.instructions {*/
@@ -340,20 +424,6 @@ body {
 /*    flex-direction: column;*/
 /*    justify-content: space-evenly;*/
 /*    align-items: center;*/
-/*}*/
-
-/*.email {*/
-/*    max-width: 80vw;*/
-/*    width: 40em;*/
-/*    height: 4em;*/
-/*    padding: 2em 1.5em 1.5em 1.5em;*/
-/*    margin: 1vh;*/
-/*}*/
-
-/*#stay:hover {*/
-/*    text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);*/
-/*    cursor: pointer;*/
-/*    transition: 800ms;*/
 /*}*/
 
 /*.bug {*/
