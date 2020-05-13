@@ -53,7 +53,7 @@ function writeUserData(email) {
         .then(() => {
             let email = document.getElementById("inputEmail");
             email.value = "";
-            show_success();
+            // show_success();
         }, function(error) {
             let email = document.getElementById("inputEmail");
             email.value = "";
@@ -61,20 +61,20 @@ function writeUserData(email) {
         });
 }
 
-// let subscribeButton = document.getElementById("subscribe");
+let subscribeButton = document.getElementById("subscribe");
 
-// subscribeButton.addEventListener('click',
-//     () => {
-//         let email = document.getElementById("inputEmail").value;
-//         let error = document.getElementById("inputEmail").validationMessage;
-//         if (!error) {
-//             writeUserData(email);
-//         } else {
-//             let email = document.getElementById("inputEmail");
-//             email.value = "";
-//             email.placeholder = error;
-//         }
-//     });
+subscribeButton.addEventListener('click',
+    () => {
+        let email = document.getElementById("inputEmail").value;
+        let error = document.getElementById("inputEmail").validationMessage;
+        if (!error) {
+            writeUserData(email);
+        } else {
+            let email = document.getElementById("inputEmail");
+            email.value = "";
+            email.placeholder = error;
+        }
+    });
 
 // let modal1 = document.getElementById('success');
 // modal1.style.display = "none";

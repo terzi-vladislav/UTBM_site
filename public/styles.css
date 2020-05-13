@@ -336,11 +336,18 @@ body {
     }
 
     .email {
-        width: 70%;
+        font-size: 2vh;
+        padding: 2vh 2vh 1vh 2vh;
+        width: 80%;
+    }
+
+    .email::placeholder{
+        font-size: 2vh;
     }
 
     .subscribe {
-        width: 70%;
+        transform: translate(0, 1vh);
+        width: 80%;
     }
 
 }
